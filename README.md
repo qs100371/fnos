@@ -2,7 +2,7 @@
 install a fnos in docker
 
 # 原理
-基于项目https://github.com/qemus/qemu，在docker容器里通过qemu运行fnos。
+基于项目[https://github.com/qemus/qemu](https://github.com/qemus/qemu)，在docker容器里通过qemu运行fnos。
 
 # docker-compose.yml
 
