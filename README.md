@@ -4,7 +4,7 @@ install a fnos in docker
 # 原理
 基于项目[https://github.com/qemus/qemu](https://github.com/qemus/qemu)，在docker容器里通过qemu运行fnos。
 
-# docker-compose.yml
+# 创建docker-compose.yml，内容如下
 ```
 services:
   fnos:
@@ -56,7 +56,13 @@ docker network create -d macvlan \
 ens133是本地网卡名，可通过ifconfig命令查看。
 
 # 启动容器
+```
 docker compose pull
 docker compose up -d
-
+```
 拉取镜像可能需要梯子。
+
+# 安装fnos
+浏览器访问192.168.0.10:8006，按提示完成fnos安装，
+安装完成后，打开192.168.0.10:5666体验fnos。
+
