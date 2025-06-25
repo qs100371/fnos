@@ -41,9 +41,13 @@ environment:
 BOOT: “https://iso.liveupdate.fnnas.com/x86_64/trim/fnos-0.9.11-946.iso“ #飞牛os最新安装镜像地址
 
 RAM_SIZE: “2G” #qemu设定的内存和核
+
 CPU_CORES: “4”
+
 DISK_SIZE: “16G” #飞牛系统盘大小
+
 DISK2_SIZE: “200G” #数据盘大小
+
 networks：设定飞牛系统本地IP
 
 # 创建macvlan网络
