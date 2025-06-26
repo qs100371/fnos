@@ -44,14 +44,14 @@ RAM_SIZE: “2G” #qemu设定的内存和核
 
 CPU_CORES: “4”
 
-DISK_SIZE: “16G” #飞牛系统盘大小
+DISK_SIZE: “16G” #飞牛系统盘大小，对应容器里的/storiage，系统里的目录/dir1
 
-DISK2_SIZE: “200G” #数据盘大小
+DISK2_SIZE: “200G” #数据盘大小，对应容器里的/storiage2，系统里的目录/dir2
 
 networks：设定飞牛系统本地IP
 
 # 创建macvlan网络
-在缺省网络模式下，qemu里运行的fnos无法通过IP从外部访问。
+在缺省网络模式下，qemu里运行的fnos无法通过IP从外部访问。假设内网是192.168.0.*
 运行：
 ```
 docker network create -d macvlan \
@@ -68,6 +68,7 @@ docker compose pull
 docker compose up -d
 ```
 拉取镜像可能需要梯子。
+修改docker-compose.yml后需docker compose down，再重新启动容器。
 
 # 安装fnos
 浏览器访问192.168.0.10:8006，按提示完成fnos安装，
