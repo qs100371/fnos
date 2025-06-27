@@ -8,7 +8,7 @@ install a fnos in docker
 ```
 services:
   fnos:
-    image: qemux/qemu
+    image: ghcr.io/qemus/qemu:7.12
     container_name: fnos
     environment:
       BOOT: "https://iso.liveupdate.fnnas.com/x86_64/trim/fnos-0.9.11-946.iso"
